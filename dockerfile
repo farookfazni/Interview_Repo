@@ -26,12 +26,13 @@ RUN conda create -n myenv python=3.11 -y && conda clean --all -y
 SHELL ["conda", "run", "-n", "myenv", "/bin/bash", "-c"]
 
 # Install required Python packages
-RUN conda install -n myenv -y \
+RUN conda install -n myenv -c conda-forge -y \
     pyspark \
     numpy \
     pandas \
     scipy \
     scikit-learn \
+    accelerate \
     pyarrow \
     transformers \
     duckdb \
@@ -40,7 +41,7 @@ RUN conda install -n myenv -y \
     smart-open \
     sqlalchemy \
     pytest \
-    && pip install accelerate datasets neo4j onnxruntime seqeval gensim numba 
+    && pip install datasets neo4j onnxruntime seqeval gensim numba 
 
 # Set working directory
 WORKDIR /app
