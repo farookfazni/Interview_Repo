@@ -50,4 +50,4 @@ WORKDIR /app
 COPY . .
 
 # Entry point to execute the script with arguments
-ENTRYPOINT ["conda", "run", "-n", "myenv", "python", "src/run.py"]
+ENTRYPOINT ["conda", "run", "-n", "myenv", "python", "src/run.py","process_data","-dataset","sh0416/ag_news","-dirout","ztmp/data"]
