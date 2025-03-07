@@ -34,14 +34,13 @@ RUN conda install -n myenv -y \
     scikit-learn \
     pyarrow \
     transformers \
-    accelerate \
     duckdb \
     s3fs \
     umap-learn \
     smart-open \
     sqlalchemy \
     pytest \
-    && pip install datasets neo4j onnxruntime seqeval gensim numba 
+    && pip install accelerate datasets neo4j onnxruntime seqeval gensim numba 
 
 # Set working directory
 WORKDIR /app
