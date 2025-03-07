@@ -50,4 +50,4 @@ WORKDIR /app
 COPY . .
 
 # Entry point to execute the script with arguments
-ENTRYPOINT ["conda", "run", "-n", "myenv", "python", "script.py"]
+ENTRYPOINT ["conda", "run", "-n", "myenv", "python", "src/run.py"]
