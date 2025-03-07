@@ -1,5 +1,5 @@
 # Use Debian as the base image
-FROM debian:latest
+FROM debian:bookworm
 
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive
