@@ -1,5 +1,5 @@
 # Use Debian as the base image
-FROM debian:bookworm
+FROM debian:latest
 
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive
@@ -11,11 +11,9 @@ RUN apt-get update && apt-get install -y \
     curl \
     wget \
     git \
-    openjdk-11-jdk \
     build-essential \
     libssl-dev \
     libffi-dev \
-    libsqlite3-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Miniconda (Python 3.11)
