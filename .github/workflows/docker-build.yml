@@ -24,4 +24,4 @@ jobs:
       run: docker build . --file Dockerfile --tag spark_app:latest
 
     - name: Push to Docker Hub
-      run: docker push faznifarook/interview:latest
+      run: docker push faznifarook/spark_app:latest
