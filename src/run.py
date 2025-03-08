@@ -77,7 +77,7 @@ def process_data_all(input_path: str, output_path: str) -> None:
                 .groupBy('word') \
                 .agg(count('*').alias('word_count'))
     
-    output_file = f"{output_path}/word_count_{YYYYMMDD}.parquet"
+    output_file = f"{output_path}/word_count_all{YYYYMMDD}.parquet"
     
     logging.info(f"Saving results to {output_file}...")
     result.write.mode('overwrite').parquet(output_file)
