@@ -1,0 +1,2 @@
+https://github.com/farookfazni/Interview_Repo.git
+docker pull faznifarook/spark_app:latest
